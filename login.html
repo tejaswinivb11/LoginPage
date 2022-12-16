@@ -1,0 +1,207 @@
+<html>
+
+<head>
+    <title>login page</title>
+    <link rel="icon" type="image/x-icon" href="movie.jpg">
+    <style>
+        pre {
+            font-size: 40px;
+            text-align: center;
+            color: #490B3D;
+            padding: 5px;
+            font-family: cursive;
+            text-transform: capitalize;
+            text-shadow: 1px 1px #490B3D;
+            font-weight: bold;
+        }
+
+        body {
+            background-color: #F1B814;
+            /* background-attachment:scroll;
+                background-repeat: no-repeat; */
+            background-position: right top;
+
+        }
+
+        #form {
+            text-align: center;
+
+        }
+
+        #fielset {
+            position: relative;
+            width: 500px;
+            margin: 0px auto;
+            height: 35%;
+            background-color: #BD1E51;
+            border-radius: 750px;
+            shape-margin: circle;
+            box-shadow: #490B3D;
+
+        }
+
+        #username {
+            margin-left: 120px;
+            color: 490B3D;
+            font-size: 120%;
+            font-size: 20px;
+            font-family: cursive;
+            text-shadow: #490B3D;
+
+        }
+
+        #password {
+            color: 490B3D;
+            font-size: 120%;
+            margin-left: 120px;
+            font-size: 20px;
+            font-family: cursive;
+        }
+
+        #div {
+            align-items: center;
+        }
+
+        #submit {
+            margin-right: 5%;
+            color: #490B3D;
+            font-weight: bold;
+            margin-left: 120px;
+            font-family: cursive;
+            border-radius: 10px;
+        }
+
+        #reset {
+            margin-right: 10%;
+            color: #490B3D;
+            font-weight: bold;
+            margin-right: 0;
+            font-family: cursive;
+            border-radius: 10px;
+        }
+
+        #name-error {
+            color: #490B3D;
+            margin-left: 120px;
+        }
+
+        #password-error {
+            color: #490B3D;
+            margin-left: 120px;
+        }
+
+        #user {
+            margin-left: 120px;
+            font-family: cursive;
+            border-radius: 10px;
+            color: #490B3D;
+        }
+
+        #pass {
+            margin-left: 120px;
+            font-family: cursive;
+            border-radius: 10px;
+            color: #490B3D;
+        }
+    </style>
+    <script>
+
+        console.log(validates());
+        console.log("hello");
+
+        function validates() {
+            let user = document.getElementById("user").value;
+            let pas = document.getElementById("pass").value;
+            let status = false;
+            //     const regnm=/^[A-Za-z]\w{7,14}$/;
+            //     if (user.match(regnm)){
+            //         status=true;
+            //     }
+            //     else{
+            //         status=false;
+            //     }
+            //     return status;
+            // }
+            if (user.length < 1 || user == "") {
+                document.getElementById("name-error").innerHTML = "please enter the user name.";
+                status = false;
+            }
+            else { status = true; }
+
+            if (pas.length < 1) {
+                document.getElementById("password-error").innerHTML = "please enter the password";
+                status = false;
+            }
+            else if (pas.length < 6) {
+                document.getElementById("password-error").innerHTML = "length of the password should be greater than 6";
+                status = false;
+            }
+            else { status = true; }
+
+
+
+            // function validate(){
+            //     let user=document.getElementById("user").value;
+            //     let pas=document.getElementById("pass").value;
+            //     let status=false;
+            //     if (user.length<1 || user==""){
+            //         document.getElementById("name-error").innerHTML="please enter the user name.";
+            //         status=false;
+            //     }
+            //     else{status=true; }
+            //     if (pas.length<1){
+            //         document.getElementById("password-error").innerHTML="please enter the password";
+            //         status= false;
+            //     }
+            //     else if(pas.length<6){
+            //         document.getElementById("password-error").innerHTML="length of the password should be greater than 6";
+            //         status= false;
+            //     }
+            //     else{status= true;}
+            //To check a password between 6 to 12 characters
+            // which contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character
+            // /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/
+            //^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$/;
+            ///^[A-Za-z]\w{7,14}$/;
+            // let decimal = 
+            // if (pas.match(decimal)){
+            //     status=true;
+            // }
+            // else{
+            //     alert("password should contain at least one lowercase letter,one uppercase letter, one numeric digit, and one special character");
+            //     //document.getElementById("password-error").innerHTML="password should contain at least one lowercase letter,one uppercase letter, one numeric digit, and one special character"
+            //     status =false;
+            // }
+
+            return status;
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <pre>
+Welcome.
+        </pre>
+    <form name="form" onsubmit="validates()" action="#" method="post">
+        <fieldset id="fielset">
+            <div id=div>
+                <label for="username" id="username">Username</label><br><br>
+                <input type="text" placeholder="user name" name="username" id="user" /><br>
+                <span id="name-error"></span>
+                <br>
+                <label for="password" id="password">Password</label><br><br>
+                <input type="password" placeholder="Password" name="passsword" id="pass" /><br>
+                <span id="password-error"></span>
+                <br>
+                <input type="submit" id="submit">
+                <input type="reset" id="reset">
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>

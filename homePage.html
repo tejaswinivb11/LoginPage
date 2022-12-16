@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>home page..</title>
+        <style>
+            body{
+                background-color: F1B814;
+               
+            }
+            #button1{
+                padding: 100px 100px;
+                /* color:rgb(132, 0, 255);
+                font-size: 450%; */
+                cursor: pointer;
+                margin-right: 250px;
+                margin-top: 20px;
+                background-image: url("https://cdn.shortpixel.ai/spai/w_800+q_lossy+ret_img+to_webp/https://ted-ielts.com/wp-content/uploads/2019/04/movies-1_fcslqf.jpg") ;
+                background-size: 95% 95%;
+                border-radius: 60px;
+            }
+            #button2{
+                padding: 100px 100px;
+                cursor: pointer;
+                margin-right: 250px;
+                margin-top: 20px;
+                background-image: url("https://imageio.forbes.com/specials-images/imageserve/750037840/0x0.jpg?format=jpg&width=1200") ;
+                background-size: 95% 95%;
+                border-radius: 60px;
+            }
+            #button3{
+                padding: 100px 100px;
+                cursor: pointer;
+                margin-right: 250px;
+                margin-top: 20px;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2hEtK496kKAFfieO3BLJYeN8tP0rgEnTn3Q&usqp=CAU") ;
+                background-size: 105% ;
+                border-radius: 60px;
+            }
+            #h1{
+                text-align: center;
+                font-size:50px;
+                font-family: cursive;
+                text-shadow:2px 2px #490B3D;
+                color:#BD1E51;
+            }
+            #divb1{
+                background-color:#dda408;
+                height: 230px;
+                width:800px;
+                margin-left: 300px;
+                margin-right: 250px;
+
+            }
+            #sp1{
+                font-size: 24px;
+                font-family: cursive;
+                margin-left: -21%;
+                text-shadow:1px 2px #490B3D;
+                color:#490B3D;
+                font-weight: bold;
+                text-decoration-line: underline;
+            }
+            #divb2{
+                background-color:#dda408;
+                height: 230px;
+                width:800px;
+                margin-left: 300px;
+                margin-right: 250px;
+
+            }
+            #sp2{
+                font-size: 24px;
+                font-family: cursive;
+                margin-left: -21%;
+                text-shadow:1px 2px #490B3D;
+                color:#490B3D;
+                font-weight: bold;
+                text-decoration-line: underline;
+            }
+            #divb3{
+                background-color:#dda408;
+                height: 230px;
+                width:800px;
+                margin-left: 300px;
+                margin-right: 250px;
+
+            }
+            #sp3{
+                font-size: 24px;
+                font-family: cursive;
+                margin-left: -21%;
+                text-shadow:1px 2px #490B3D;
+                color:#490B3D;
+                font-weight: bold;
+                text-decoration-line: underline;
+            }
+        </style>
+        <script>
+            function movies(){
+                document.getElementById("divb1").onclick=function(){
+                    location.href="moviesPage.html";
+                };    
+            }
+            function music(){
+                location.href="music.html";
+            }
+            function image(){
+                location.href="images.html";
+            }
+
+        </script>
+    </head>
+    <Body>
+        <h1 id="h1">what you need?</h1><br><br>
+        <div id="divb1" onclick="return movies()" title="wanna watch movies?">  
+            <button id="button1"  ></button><span id="sp1">click here to download movies.</span></div><br><br>
+        <div id="divb2" onclick="music()" title="wanna listen to music?">  
+            <button id="button2" ></button><span id="sp2">click here to listen music.</span></div><br><br>
+        <div id="divb3" onclick="image()" title="wanna watch photos?"> 
+            <button id="button3"  title="wanna watch movies?"></button><span id="sp3">click here to view.</span></div>
+    </Body>
+</html>
